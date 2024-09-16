@@ -1,0 +1,69 @@
+.header
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  padding: 1rem 2rem
+  font-family: 'Another', sans-serif
+  font-size: 2rem
+
+  // Media queries pour grands écrans
+  @media (min-width: 1024px)
+    font-size: 4rem
+    padding: 2rem 5rem
+
+  .logo
+    display: flex
+    margin-bottom: 1rem
+
+    .brand
+      color: #d10202
+      font-size: inherit
+
+    .ifi
+      color: #F9F9F9
+      font-size: inherit
+
+    .logo-link
+      text-decoration: none
+
+  .barre
+    display: flex
+    justify-content: space-between
+    gap: 1rem
+    width: 100% 
+
+    // Media queries pour écrans moyens
+    @media (max-width: 1024px) 
+      flex-direction: column
+      gap: 0.5rem
+
+// Media queries pour écrans moyens
+@media (max-width: 1024px) 
+  .header
+    align-items: center
+
+// Media queries pour mobiles
+@media (max-width: 480px) 
+  .header
+    padding: 1rem
+
+  .logo
+    font-size: 2.5rem
+    margin-bottom: 0.5rem
+    text-align: center // Center the logo on mobile
+
+  .barre
+    flex-direction: column 
+    align-items: center
+    gap: 1rem 
+
+    // Pour chaque élément de la barre (filtre et recherche)
+    > * // Sélecteur pour cibler les éléments directs de .barre
+      width: 100% 
+      margin-bottom: 0.5rem 
+
+  // Ajuste la taille des boutons et de la barre de recherche sur mobile
+  .barre button,
+  .barre input
+    width: 100% 
+    padding: 0.8rem 
